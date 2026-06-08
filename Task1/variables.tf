@@ -3,8 +3,8 @@ variable "vpc_name" {
   type        = string
 }
 variable "aws_region" {
-    description = "AWS region where the resources will be created"
-    type        = string
+  description = "AWS region where the resources will be created"
+  type        = string
 }
 variable "vpc_cidr" {
   description = "CIDR block for the VPC"

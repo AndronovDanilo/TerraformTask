@@ -1,32 +1,42 @@
 variable "vpc_name" {
-  type = string
+  description = "Name of the VPC to be created"
+  type        = string
 }
 variable "vpc_cidr" {
-  type = string
+  description = "CIDR block for the VPC"
+  type        = string
 }
 variable "subnet1_name" {
-  type = string
+  description = "Name of the first subnet to be created"
+  type        = string
 }
 variable "subnet1_cidr" {
-  type = string
+  description = "CIDR block for the first subnet"
+  type        = string
 }
 variable "subnet2_name" {
-  type = string
+  description = "Name of the second subnet to be created"
+  type        = string
 }
 variable "subnet2_cidr" {
-  type = string
+  description = "CIDR block for the second subnet"
+  type        = string
 }
 variable "subnet3_name" {
-  type = string
+  description = "Name of the third subnet to be created"
+  type        = string
 }
 variable "subnet3_cidr" {
-  type = string
+  description = "CIDR block for the third subnet"
+  type        = string
 }
 
 variable "igw_name" {
-  type = string
+  description = "Name of the Internet Gateway to be created"
+  type        = string
 }
 
 variable "route_table_name" {
-  type = string
+  description = "Name of the Route Table to be created"
+  type        = string
 }

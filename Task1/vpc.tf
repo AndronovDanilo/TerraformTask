@@ -54,3 +54,18 @@ resource "aws_route" "route" {
   gateway_id             = aws_internet_gateway.gw.id
 }
 
+resource "aws_route_table_association" "subnet1_assoc" {
+  subnet_id      = aws_subnet.subnet1.id
+  route_table_id = aws_route_table.route_table.id
+}
+
+resource "aws_route_table_association" "subnet2_assoc" {
+  subnet_id      = aws_subnet.subnet2.id
+  route_table_id = aws_route_table.route_table.id
+}
+
+resource "aws_route_table_association" "subnet3_assoc" {
+  subnet_id      = aws_subnet.subnet3.id
+  route_table_id = aws_route_table.route_table.id
+}
+

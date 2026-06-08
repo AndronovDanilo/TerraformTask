@@ -1,3 +1,4 @@
+aws_region = "eu-west-1"
 vpc_name         = "cmtr-ygbit6f1-01-vpc"
 subnet1_name     = "cmtr-ygbit6f1-01-subnet-public-a"
 subnet2_name     = "cmtr-ygbit6f1-01-subnet-public-b"

@@ -18,12 +18,20 @@ variable "subnet1_cidr" {
   description = "CIDR block for the first subnet"
   type        = string
 }
+variable "availability_zone1" {
+  description = "Availability Zone for the first subnet"
+  type        = string
+}
 variable "subnet2_name" {
   description = "Name of the second subnet to be created"
   type        = string
 }
 variable "subnet2_cidr" {
   description = "CIDR block for the second subnet"
+  type        = string
+}
+variable "availability_zone2" {
+  description = "Availability Zone for the second subnet"
   type        = string
 }
 variable "subnet3_name" {
@@ -34,7 +42,10 @@ variable "subnet3_cidr" {
   description = "CIDR block for the third subnet"
   type        = string
 }
-
+variable "availability_zone3" {
+  description = "Availability Zone for the third subnet"
+  type        = string
+}
 variable "igw_name" {
   description = "Name of the Internet Gateway to be created"
   type        = string

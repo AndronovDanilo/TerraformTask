@@ -1,4 +1,3 @@
-ssh_key             = ""
 ssh_key_name        = "cmtr-ygbit6f1-keypair"
 aws_region          = "eu-west-1"
 vpc_name            = "cmtr-ygbit6f1-vpc"

@@ -4,8 +4,8 @@ data "aws_vpc" "network" {
   }
 }
 data "aws_subnet" "subnet" {
-  vpc_id = data.aws_vpc.network.id
-
+  vpc_id            = data.aws_vpc.network.id
+  availability_zone = "eu-west-1a"
   filter {
     name   = "map-public-ip-on-launch"
     values = ["true"]

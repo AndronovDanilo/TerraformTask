@@ -18,14 +18,14 @@ data "aws_security_group" "security_group" {
 }
 
 resource "aws_instance" "cmtr-ygbit6f1-ec2" {
-  ami                    = "ami-0bb84b8f0cc4f36c5"
-  instance_type          = "t2.micro"
-  key_name               = aws_key_pair.ssh_key.key_name
-  subnet_id              = data.aws_subnet.subnet.id
-  vpc_security_group_ids = [data.aws_security_group.security_group.id]
+  ami                         = "ami-0bb84b8f0cc4f36c5"
+  instance_type               = "t2.micro"
+  key_name                    = aws_key_pair.ssh_key.key_name
+  subnet_id                   = data.aws_subnet.subnet.id
+  vpc_security_group_ids      = [data.aws_security_group.security_group.id]
   associate_public_ip_address = true
 
   tags = {
-    Project                     = var.project_name
+    Project = var.project_name
   }
 }

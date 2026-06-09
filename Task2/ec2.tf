@@ -36,6 +36,16 @@ resource "aws_instance" "cmtr-ygbit6f1-ec2" {
   associate_public_ip_address = true
 
   tags = {
+    Name    = "cmtr-ygbit6f1-ec2"
     Project = var.project_name
   }
 }
+
+resource "terraform_data" "status_message" {
+  depends_on = [aws_instance.cmtr-ygbit6f1-ec2]
+
+  provisioner "local-exec" {
+    command = "echo running"
+  }
+}
+

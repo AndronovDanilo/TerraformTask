@@ -1,0 +1,6 @@
+ssh_key         = ""
+ssh_key_name    = "cmtr-ygbit6f1-keypair"
+aws_region      = "eu-west-1"
+VpcId           = "cmtr-ygbit6f1-vpc"
+SecurityGroupId = "cmtr-ygbit6f1-sg"
+ProjectId       = "epam-tf-lab"

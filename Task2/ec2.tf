@@ -1,6 +1,6 @@
 data "aws_vpc" "network" {
   tags = {
-    name = var.vpc_name
+    Name = var.vpc_name
   }
 }
 data "aws_subnet" "subnet" {
@@ -23,9 +23,9 @@ resource "aws_instance" "cmtr-ygbit6f1-ec2" {
   key_name               = aws_key_pair.ssh_key.key_name
   subnet_id              = data.aws_subnet.subnet.id
   vpc_security_group_ids = [data.aws_security_group.security_group.id]
+  associate_public_ip_address = true
 
   tags = {
     Project                     = var.project_name
-    associate_public_ip_address = true
   }
 }

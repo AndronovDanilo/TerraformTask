@@ -10,15 +10,15 @@ variable "aws_region" {
   description = "AWS region for deployment"
   type        = string
 }
-variable "VpcId" {
-  description = "VPC ID"
+variable "vpc_name" {
+  description = "vpc name for resources"
   type        = string
 }
-variable "SecurityGroupId" {
-  description = "Security Group ID"
+variable "security_group_name" {
+  description = "Security Group Name"
   type        = string
 }
-variable "ProjectId" {
-  description = "Project ID"
+variable "project_name" {
+  description = "Project Name"
   type        = string
 }

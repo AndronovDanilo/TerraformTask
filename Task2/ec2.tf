@@ -1,5 +1,7 @@
 data "aws_vpc" "network" {
-  id = var.VpcId
+  tags = {
+    name = var.vpc_name
+  }
 }
 data "aws_subnet" "subnet" {
   vpc_id = data.aws_vpc.network.id
@@ -12,7 +14,7 @@ data "aws_subnet" "subnet" {
 
 data "aws_security_group" "security_group" {
   vpc_id = data.aws_vpc.network.id
-  name   = var.SecurityGroupId
+  name   = var.security_group_name
 }
 
 resource "aws_instance" "cmtr-ygbit6f1-ec2" {
@@ -23,7 +25,7 @@ resource "aws_instance" "cmtr-ygbit6f1-ec2" {
   vpc_security_group_ids = [data.aws_security_group.security_group.id]
 
   tags = {
-    Project                     = var.ProjectId
+    Project                     = var.project_name
     associate_public_ip_address = true
   }
 }
